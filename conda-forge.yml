@@ -1,6 +1,9 @@
-travis:
-  secure:
-    BINSTAR_TOKEN: eEM18ElGKwP3XlFQo/I4m1B5J5ywmsK5vZsDYEpjLOMbpxLwE/mvP0wYd5GWK8yxlSaDhKuXSJ85vP0j3q5ROC5eJcYrwpeF79Ttdw/g6oD1bUolTRtGiXOXklKvGaIb/Tuec/F2iht+7PdzfknHUntexKmtlizs17KhkXOZ2f4mzZ62DnA1k11f3DSSIA63HucIRvccG3bvU6e45XQ15Ob/wh5eVE0HAIZalmuKC5daXif5vzIZW8F/PEmx1ZzAV232lcsIMIkdoXNOgLGSkn8LbOfKAJotgvWIMD/ArGBOXd0VnJ/pUI4yycsdeOHnOB8eZ1VCFGOqkIKl10eVLDxLUnIYIPwZZV955SoKrVy1iWf44uG8TyVtiiiUQfcWTgAKbhVP4ezpE2Gdr9RiW2xJ4ppewqvAoLik87420tWVFsOj+RGxdTLrDJ1KEjm30oUr655+4/nphjk+kPKEz8d0jlrbW8d8wFDtJ4QVp22bc0Eg8VJekLhGmj6uyyn9oamvXlcxT5RyAWRo1Y6t8OJrwd1C/8p/Dt3GYNsCo+g4yGgCDItS2SZQRUS/i9xU+Rg6INadZE7SXlhvm3nhdINeUxaSi24YZE0IzyT3sqr9DPA4TiS2ByK7K8Uq7PY+21/eh8ULj7DBy31WtL7GeM0APkpOhRHuld3nUqFVbnk=
-appveyor:
-  secure:
-    BINSTAR_TOKEN: ipv/06DzgA7pzz2CIAtbPxZSsphDtF+JFyoWRnXkn3O8j7oRe3rzqj3LOoq2DZp4
+build_platform: {osx_arm64: osx_64}
+conda_forge_output_validation: true
+provider: {linux_aarch64: default, linux_ppc64le: default, win: azure}
+test_on_native_only: true
+azure:
+  store_build_artifacts: true
+github:
+  branch_name: main
+  tooling_branch_name: main

@@ -6,13 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  fn: release-{{ version }}.tar.gz
   url: https://github.com/google/googletest/archive/release-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
-  detect_binary_files_with_prefix: False # [win]
 
 requirements:
   build:
@@ -115,7 +113,7 @@ outputs:
 
 about:
   home: https://github.com/google/googletest
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Google's C++ test framework

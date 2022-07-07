@@ -132,3 +132,4 @@ if errorlevel 1 exit 1
 copy lib\gmockd.lib %LIBRARY_LIB%\gmockd-mdd.lib
 if errorlevel 1 exit 1
 cd %GTEST_DIR%
+
