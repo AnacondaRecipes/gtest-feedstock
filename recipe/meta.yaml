@@ -113,10 +113,17 @@ outputs:
 
 about:
   home: https://github.com/google/googletest
-  license: BSD-3-Clause
-  license_family: BSD
-  license_file: LICENSE
   summary: Google's C++ test framework
+  license: BSD-3-Clause
+  license_file: LICENSE
+  license_family: BSD
+  description: |
+    This repository is a merger of the formerly separate GoogleTest and
+    GoogleMock projects. These were so closely related that it makes sense to
+    maintain and release them together.
+  doc_url: https://google.github.io/googletest/
+  doc_source_url: https://github.com/google/googletest/tree/main/docs
+  dev_url: https://github.com/google/googletest
 
 extra:
   recipe-maintainers:
