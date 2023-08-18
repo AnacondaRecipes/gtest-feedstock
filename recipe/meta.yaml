@@ -1,13 +1,12 @@
-{% set version = "1.11.0" %}
-{% set sha256 = "b4870bf121ff7795ba20d20bcdd8627b8e088f2d1dab299a031c1034eddc93d5" %}
+{% set version = "1.14.0" %}
 
 package:
-  name: gtest
+  name: gtest_suite
   version: {{ version }}
 
 source:
-  url: https://github.com/google/googletest/archive/release-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/google/googletest/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 8ad598c73ad796e0d8280b082cebd82a630d73e73cd3c70057938a6501bba5d7
 
 build:
   number: 0
@@ -15,7 +14,6 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - python 3.9
     - cmake
     - ninja
   host: []  # Empty host dependency section
@@ -26,7 +24,6 @@ outputs:
     requirements:
       build:
         - {{ compiler('cxx') }}
-        - python 3.9
         - cmake
         - ninja
       run_constrained:
@@ -70,11 +67,10 @@ outputs:
     requirements:
       build:
         - {{ compiler('cxx') }}
-        - python 3.9
         - cmake
         - ninja
       host:
-        - {{ pin_subpackage('gtest', exact=True) }}
+        - gtest {{ version }}
       run:
         - {{ pin_subpackage('gtest', exact=True) }}
     files:
@@ -122,7 +118,6 @@ about:
     GoogleMock projects. These were so closely related that it makes sense to
     maintain and release them together.
   doc_url: https://google.github.io/googletest/
-  doc_source_url: https://github.com/google/googletest/tree/main/docs
   dev_url: https://github.com/google/googletest
 
 extra:
