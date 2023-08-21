@@ -77,6 +77,12 @@ about:
   license_family: BSD
   license_file: LICENSE
   summary: Google's C++ test framework
+  description: |
+    This repository is a merger of the formerly separate GoogleTest and
+    GoogleMock projects. These were so closely related that it makes sense to
+    maintain and release them together.
+  doc_url: https://google.github.io/googletest/
+  dev_url: https://github.com/google/googletest
 
 extra:
   recipe-maintainers:
